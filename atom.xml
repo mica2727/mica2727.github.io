@@ -5,7 +5,7 @@
   <subtitle>Litos is a modern blogging theme built on Astro.js, designed for developers. It supports multiple post layouts, photo displays, project displays, and more, providing an elegant user experience and powerful customization capabilities.</subtitle>
   <link href="https://litos.vercel.app//atom.xml" rel="self" type="application/atom+xml"/>
   <link href="https://litos.vercel.app/" rel="alternate" type="text/html"/>
-  <updated>2026-10-10T12:49:56.572Z</updated>
+  <updated>2026-10-10T13:41:54.805Z</updated>
   <language>en</language>
   <id>https://litos.vercel.app//</id>
   <author>
@@ -15,6 +15,22 @@
   <generator uri="https://github.com/Dnzzk2/Litos" version="5.0">Astro Litos Theme</generator>
   <rights>Copyright © 2026 Dnzzk2</rights>
   
+  <entry>
+    <title>My Post</title>
+    <link href="https://litos.vercel.app//posts/mypost" rel="alternate" type="text/html"/>
+    <id>https://litos.vercel.app//posts/mypost</id>
+    <updated>2026-10-10T00:00:00.000Z</updated>
+    <published>2026-10-10T00:00:00.000Z</published>
+    <author>
+      <name>Ixios</name>
+    </author>
+    <summary type="text">Un simple essai pour voir si ça fonctionne</summary>
+    <content type="html"><![CDATA[<img src="https://litos.vercel.app/_astro/cover.Do3E5r53_Z1UoMh2.webp" alt="My Post" style="width: 100%; height: auto; margin-bottom: 1em;" />
+<p>Bonjour à tous,</p>
+<p>C’est mon premier post pour voir si tout se passe bien, et si ça fonctionne.</p>]]></content>
+    <category term="Test" />
+    <category term="MyPost" />
+  </entry>
   <entry>
     <title>How to get started with this theme</title>
     <link href="https://litos.vercel.app//posts/start" rel="alternate" type="text/html"/>

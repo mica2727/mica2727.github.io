@@ -9,11 +9,24 @@
     <managingEditor>Dnzzk2</managingEditor>
     <webMaster>Dnzzk2</webMaster>
     <author>Dnzzk2</author>
-    <pubDate>2026-10-10T12:49:57.415Z</pubDate>
-    <lastBuildDate>2026-10-10T12:49:57.415Z</lastBuildDate>
+    <pubDate>2026-10-10T13:41:56.502Z</pubDate>
+    <lastBuildDate>2026-10-10T13:41:56.502Z</lastBuildDate>
     <generator>Astro Litos Theme</generator>
     <atom:link href="https://litos.vercel.app//rss.xml" rel="self" type="application/rss+xml" />
     
+    <item>
+      <title>My Post</title>
+      <link>https://litos.vercel.app//posts/mypost</link>
+      <guid>https://litos.vercel.app//posts/mypost</guid>
+      <updated>2026-10-10T00:00:00.000Z</updated>
+      <pubDate>2026-10-10T00:00:00.000Z</pubDate>
+      <description><![CDATA[Un simple essai pour voir si ça fonctionne]]></description>
+      <content:encoded><![CDATA[<img src="https://litos.vercel.app/_astro/cover.Do3E5r53_Z1UoMh2.webp" alt="My Post" style="width: 100%; height: auto; margin-bottom: 1em;" />
+<p>Bonjour à tous,</p>
+<p>C’est mon premier post pour voir si tout se passe bien, et si ça fonctionne.</p>]]></content:encoded>
+      <author>Ixios</author>
+      <category>Test</category><category>MyPost</category>
+    </item>
     <item>
       <title>How to get started with this theme</title>
       <link>https://litos.vercel.app//posts/start</link>

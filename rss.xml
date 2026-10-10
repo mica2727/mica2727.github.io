@@ -2,39 +2,38 @@
 <?xml-stylesheet type="text/xsl" href="/rss/rss-styles.xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Litos</title>
-    <description>Litos is a modern blogging theme built on Astro.js, designed for developers. It supports multiple post layouts, photo displays, project displays, and more, providing an elegant user experience and powerful customization capabilities.</description>
-    <link>https://litos.vercel.app/</link>
-    <language>en</language>
-    <managingEditor>Dnzzk2</managingEditor>
-    <webMaster>Dnzzk2</webMaster>
-    <author>Dnzzk2</author>
-    <pubDate>2026-10-10T13:41:56.502Z</pubDate>
-    <lastBuildDate>2026-10-10T13:41:56.502Z</lastBuildDate>
+    <title>Ixios</title>
+    <description>Toutes mes créations, à venir, ou déjà réalisé, mon propre blog.</description>
+    <link>https://mica2727.github.io</link>
+    <language>fr</language>
+    <managingEditor>Ixios</managingEditor>
+    <webMaster>Ixios</webMaster>
+    <author>Ixios</author>
+    <pubDate>2026-10-10T14:36:18.631Z</pubDate>
+    <lastBuildDate>2026-10-10T14:36:18.631Z</lastBuildDate>
     <generator>Astro Litos Theme</generator>
-    <atom:link href="https://litos.vercel.app//rss.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mica2727.github.io/rss.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>My Post</title>
-      <link>https://litos.vercel.app//posts/mypost</link>
-      <guid>https://litos.vercel.app//posts/mypost</guid>
+      <link>https://mica2727.github.io/posts/mypost</link>
+      <guid>https://mica2727.github.io/posts/mypost</guid>
       <updated>2026-10-10T00:00:00.000Z</updated>
       <pubDate>2026-10-10T00:00:00.000Z</pubDate>
-      <description><![CDATA[Un simple essai pour voir si ça fonctionne]]></description>
-      <content:encoded><![CDATA[<img src="https://litos.vercel.app/_astro/cover.Do3E5r53_Z1UoMh2.webp" alt="My Post" style="width: 100%; height: auto; margin-bottom: 1em;" />
-<p>Bonjour à tous,</p>
-<p>C’est mon premier post pour voir si tout se passe bien, et si ça fonctionne.</p>]]></content:encoded>
+      <description><![CDATA[]]></description>
+      <content:encoded><![CDATA[<img src="https://mica2727.github.io/_astro/cover.Do3E5r53_Z1UoMh2.webp" alt="My Post" style="width: 100%; height: auto; margin-bottom: 1em;" />
+<p>Test</p>]]></content:encoded>
       <author>Ixios</author>
       <category>Test</category><category>MyPost</category>
     </item>
     <item>
       <title>How to get started with this theme</title>
-      <link>https://litos.vercel.app//posts/start</link>
-      <guid>https://litos.vercel.app//posts/start</guid>
+      <link>https://mica2727.github.io/posts/start</link>
+      <guid>https://mica2727.github.io/posts/start</guid>
       <updated>2025-08-15T00:00:00.000Z</updated>
       <pubDate>2025-08-15T00:00:00.000Z</pubDate>
       <description><![CDATA[Quick start for the Litos theme: prerequisites, fork-or-template setup, and next steps.]]></description>
-      <content:encoded><![CDATA[<img src="https://litos.vercel.app/_astro/cover.7-E_J0u9_Z19SPhO.webp" alt="How to get started with this theme" style="width: 100%; height: auto; margin-bottom: 1em;" />
+      <content:encoded><![CDATA[<img src="https://mica2727.github.io/_astro/cover.7-E_J0u9_Z19SPhO.webp" alt="How to get started with this theme" style="width: 100%; height: auto; margin-bottom: 1em;" />
 <p>This theme was developed during my free time, and the documentation may not be comprehensive enough, but I will try my best to explain it.</p>
 <h3>Prerequisite</h3>
 <p>Before starting, ensure you have the following tools installed in your development environment:</p>
@@ -76,12 +75,12 @@ git merge upstream/main --no-edit
     </item>
     <item>
       <title>Readme Page Config</title>
-      <link>https://litos.vercel.app//posts/readme</link>
-      <guid>https://litos.vercel.app//posts/readme</guid>
+      <link>https://mica2727.github.io/posts/readme</link>
+      <guid>https://mica2727.github.io/posts/readme</guid>
       <updated>2025-08-14T00:00:00.000Z</updated>
       <pubDate>2025-08-14T00:00:00.000Z</pubDate>
       <description><![CDATA[Configure Readme page modules (site, header/footer links, social, GitHub, skills) with field docs and examples.]]></description>
-      <content:encoded><![CDATA[<img src="https://litos.vercel.app/_astro/cover.DMtFtdkY_ZeJxeL.webp" alt="Readme Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
+      <content:encoded><![CDATA[<img src="https://mica2727.github.io/_astro/cover.DMtFtdkY_ZeJxeL.webp" alt="Readme Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
 <p>The following files are compatible with this document:</p>
 <ul>
 <li><code>src/pages/index.astro</code> - readme page.</li>
@@ -298,12 +297,12 @@ git merge upstream/main --no-edit
     </item>
     <item>
       <title>Posts Page Config</title>
-      <link>https://litos.vercel.app//posts/posts</link>
-      <guid>https://litos.vercel.app//posts/posts</guid>
+      <link>https://mica2727.github.io/posts/posts</link>
+      <guid>https://mica2727.github.io/posts/posts</guid>
       <updated>2025-08-13T00:00:00.000Z</updated>
       <pubDate>2025-08-13T00:00:00.000Z</pubDate>
       <description><![CDATA[Complete Posts configuration: fields, list styles, post metadata layouts, OG image handling, frontmatter examples, markdown syntax, and expressive-code config.]]></description>
-      <content:encoded><![CDATA[<img src="https://litos.vercel.app/_astro/cover.DuEOlrCu_2kyEMp.webp" alt="Posts Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
+      <content:encoded><![CDATA[<img src="https://mica2727.github.io/_astro/cover.DuEOlrCu_2kyEMp.webp" alt="Posts Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
 <p>The following files are compatible with this document:</p>
 <ul>
 <li><code>src/pages/posts/[...id].astro</code> - post specific content display page.</li>
@@ -445,14 +444,14 @@ git merge upstream/main --no-edit
 <h4>Type &amp; PostType</h4>
 <p>In the above document, we mentioned configurable <code>types</code> for configuring the display style of list data on the readme page, posts page, and tags page, as well as configurable <code>postTypes</code> for displaying metadata at the top of the posts content page.</p>
 <p>Here is the specific style display of <code>type</code>:</p>
-<figure><img src="https://litos.vercel.app/_astro/compact-black.DMCWHrjD_2evXXq.webp" alt="" class="img-light" /><figcaption>compact</figcaption></figure>
-<figure><img src="https://litos.vercel.app/_astro/timeLine-black.jDSZqIn4_Z2hp2Yv.webp" alt="" class="img-light" /><figcaption>time-line</figcaption></figure>
-<figure><img src="https://litos.vercel.app/_astro/minimal-black.Dxsrn9wb_1l0yun.webp" alt="" class="img-light" /><figcaption>minimal</figcaption></figure>
-<figure><img src="https://litos.vercel.app/_astro/image-black.BeMdDApH_ZV1j5H.webp" alt="" class="img-light" /><figcaption>image</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/compact-black.DMCWHrjD_2evXXq.webp" alt="" class="img-light" /><figcaption>compact</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/timeLine-black.jDSZqIn4_Z2hp2Yv.webp" alt="" class="img-light" /><figcaption>time-line</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/minimal-black.Dxsrn9wb_1l0yun.webp" alt="" class="img-light" /><figcaption>minimal</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/image-black.BeMdDApH_ZV1j5H.webp" alt="" class="img-light" /><figcaption>image</figcaption></figure>
 <p>Here is the specific style display of <code>postType</code>:</p>
-<figure><img src="https://litos.vercel.app/_astro/metaOnly-black.CAi7aUXH_2gkuT1.webp" alt="" class="img-light" /><figcaption>metaOnly</figcaption></figure>
-<figure><img src="https://litos.vercel.app/_astro/coverTop-black.Cji_8Dx0_2wd6Gt.webp" alt="" class="img-light" /><figcaption>coverTop</figcaption></figure>
-<figure><img src="https://litos.vercel.app/_astro/coverSplit-black.BGSoc6qf_1NdheF.webp" alt="" class="img-light" /><figcaption>coverSplit</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/metaOnly-black.CAi7aUXH_2gkuT1.webp" alt="" class="img-light" /><figcaption>metaOnly</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/coverTop-black.Cji_8Dx0_2wd6Gt.webp" alt="" class="img-light" /><figcaption>coverTop</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/coverSplit-black.BGSoc6qf_1NdheF.webp" alt="" class="img-light" /><figcaption>coverSplit</figcaption></figure>
 <h3>Frontmatter</h3>
 <p>After discussing the external list and overall design of the post, let’s take a look at the content of the post together. These contents are all in the <code>src/content/posts</code> folder.</p>
 <p>Below is the frontmatter of the post content:</p>
@@ -667,7 +666,7 @@ console.log(total({ flight: 1200, hotel: 450, meals: 180, transport: 60 })) // 1
 <h4>Links and Images</h4>
 <p>More tips: <a href="https://example.com/travel" rel="noopener noreferrer" target="_blank">Official Tourism Board</a></p>
 <p>Trip photo:
-<img src="https://litos.vercel.app/_astro/home.DfiDpdST_gTJAi.webp" alt="City skyline" style="width:50%" /></p>
+<img src="https://mica2727.github.io/_astro/home.DfiDpdST_gTJAi.webp" alt="City skyline" style="width:50%" /></p>
 <h4>Horizontal Rule</h4>
 <hr />
 <h4>Inline Code</h4>
@@ -858,12 +857,12 @@ PUBLIC_GITHUB_CLIENT_SECRET=your-github-client-secret
     </item>
     <item>
       <title>Markdown enhanced syntax</title>
-      <link>https://litos.vercel.app//posts/enhance</link>
-      <guid>https://litos.vercel.app//posts/enhance</guid>
+      <link>https://mica2727.github.io/posts/enhance</link>
+      <guid>https://mica2727.github.io/posts/enhance</guid>
       <updated>2025-08-12T00:00:00.000Z</updated>
       <pubDate>2025-08-12T00:00:00.000Z</pubDate>
       <description><![CDATA[Enhance Markdown with callouts, Expressive Code blocks, image caption directives, video embeds, styled links, badges, and details.]]></description>
-      <content:encoded><![CDATA[<img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="Markdown enhanced syntax" style="width: 100%; height: auto; margin-bottom: 1em;" />
+      <content:encoded><![CDATA[<img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="Markdown enhanced syntax" style="width: 100%; height: auto; margin-bottom: 1em;" />
 <p>This guide has made slight changes based on the <a href="https://astro-antfustyle-theme.vercel.app/blog/markdown-mdx-extended-features/" rel="noopener noreferrer" target="_blank">markdown-mdx-extended-features</a>.</p>
 <h2>Callouts</h2>
 <p>Supported by the <a href="https://github.com/lin-stephanie/rehype-callouts" rel="noopener noreferrer" target="_blank">rehype-callouts</a> , you can configure the plugin in <code>plugins/index.ts</code>.</p>
@@ -1115,11 +1114,11 @@ console.log('I am on line 6')
 ![](assets/cover.png)
 :::
 </code></pre>
-<figure><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="" /><figcaption>This Is a <strong>Figcaption</strong> with <em><code>&lt;figure&gt;</code> Attrs</em></figcaption></figure>
-<figure><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="" style="width:600px" /><figcaption>This is a <strong>figcaption</strong> with <em><code>&lt;img&gt;</code> attrs</em>.</figcaption></figure>
-<figure><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="" class="no-zoom" /><figcaption>This is a <strong>figcaption</strong> with <code>class:no-zoom</code>.</figcaption></figure>
-<figure><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="If [caption] not set, the alt text from ![]() will be used as the figcaption." /><figcaption>If [caption] not set, the alt text from ![]() will be used as the figcaption.</figcaption></figure>
-<figure><img src="https://litos.vercel.app/_astro/image-black.BeMdDApH_ZV1j5H.webp" alt="" class="img-light" /><figcaption>This example shows different images for light (add <code>class:img-light</code>) and dark (add <code>class:img-dark</code>) modes.</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="" /><figcaption>This Is a <strong>Figcaption</strong> with <em><code>&lt;figure&gt;</code> Attrs</em></figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="" style="width:600px" /><figcaption>This is a <strong>figcaption</strong> with <em><code>&lt;img&gt;</code> attrs</em>.</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="" class="no-zoom" /><figcaption>This is a <strong>figcaption</strong> with <code>class:no-zoom</code>.</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="If [caption] not set, the alt text from ![]() will be used as the figcaption." /><figcaption>If [caption] not set, the alt text from ![]() will be used as the figcaption.</figcaption></figure>
+<figure><img src="https://mica2727.github.io/_astro/image-black.BeMdDApH_ZV1j5H.webp" alt="" class="img-light" /><figcaption>This example shows different images for light (add <code>class:img-light</code>) and dark (add <code>class:img-dark</code>) modes.</figcaption></figure>
 <div><div><div></div><div>WARNING</div></div><div><p>Setting an image’s <code>width</code> attribute directly may cause blurriness. <a href="https://github.com/Dnzzk2/Litos/discussions/17" rel="noopener noreferrer" target="_blank">Learn more</a></p></div></div>
 <h3>image-a</h3>
 <p>The custom directive wraps an image inside a link, making it clickable.</p>
@@ -1145,9 +1144,9 @@ console.log('I am on line 6')
 ![OG image](assets/cover.png)
 :::
 </code></pre>
-<a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank"><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" /></a>
-<a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank"><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" style="margin-bottom:-1rem;transform:scaleX(1.1) scaleY(1.1)" /></a>
-<a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank"><figure><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" style="padding-top:1rem" /><figcaption>This example shows <code>:::image-a</code> wraps around <code>:::image-figure</code> (both are interchangeable).</figcaption></figure></a>
+<a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank"><img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" /></a>
+<a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank"><img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" style="margin-bottom:-1rem;transform:scaleX(1.1) scaleY(1.1)" /></a>
+<a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank"><figure><img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" style="padding-top:1rem" /><figcaption>This example shows <code>:::image-a</code> wraps around <code>:::image-figure</code> (both are interchangeable).</figcaption></figure></a>
 <h3>image-figure-polaroid</h3>
 <p>Polaroid style images with a border and shadow.</p>
 <p>In order to ensure the style size on the phone, I have set a minimum width of 300px, and you can modify and expand the style in <code>src/styles/picture.css</code>.</p>
@@ -1179,10 +1178,10 @@ cover.png
 :::
 :::::
 </code></pre>
-<p>This is a <strong>figcaption</strong> with <em><code>&lt;img&gt;</code> attrs</em>.</p><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" />
-<img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" /><p>cover.png</p>
-<img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" />
-<img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" />
+<p>This is a <strong>figcaption</strong> with <em><code>&lt;img&gt;</code> attrs</em>.</p><img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" />
+<img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" /><p>cover.png</p>
+<img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" />
+<img src="https://mica2727.github.io/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" />
 <h2>GitHub Card</h2>
 <p>Congratulations from <a href="https://github.com/oopsunix" rel="noopener noreferrer" target="_blank">oopsunix</a></p>
 <pre><code>::github{repo="Dnzzk2/Litos"}
@@ -1303,12 +1302,12 @@ Details Dropdown<ul>
     </item>
     <item>
       <title>Project And Tag Page Config</title>
-      <link>https://litos.vercel.app//posts/project-tag</link>
-      <guid>https://litos.vercel.app//posts/project-tag</guid>
+      <link>https://mica2727.github.io/posts/project-tag</link>
+      <guid>https://mica2727.github.io/posts/project-tag</guid>
       <updated>2025-08-11T00:00:00.000Z</updated>
       <pubDate>2025-08-11T00:00:00.000Z</pubDate>
       <description><![CDATA[Configure Projects and Tags pages: page texts (PROJECTS_CONFIG, TAGS_CONFIG), project content frontmatter, file locations, and usage examples.]]></description>
-      <content:encoded><![CDATA[<img src="https://litos.vercel.app/_astro/cover.Cz2psVoH_Z1OReC1.webp" alt="Project And Tag Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
+      <content:encoded><![CDATA[<img src="https://mica2727.github.io/_astro/cover.Cz2psVoH_Z1OReC1.webp" alt="Project And Tag Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
 <p>Due to the small size of the Project and tag page configurations, they are merged into one document.</p>
 <p>The following files are compatible with this document:</p>
 <ul>
@@ -1445,12 +1444,12 @@ fork: 7
     </item>
     <item>
       <title>Photos Page Config</title>
-      <link>https://litos.vercel.app//posts/photos</link>
-      <guid>https://litos.vercel.app//posts/photos</guid>
+      <link>https://mica2727.github.io/posts/photos</link>
+      <guid>https://mica2727.github.io/posts/photos</guid>
       <updated>2025-08-10T00:00:00.000Z</updated>
       <pubDate>2025-08-10T00:00:00.000Z</pubDate>
       <description><![CDATA[Current implementation notes for the Photos page, including PHOTOS_CONFIG, PhotosList, and getPhotos().]]></description>
-      <content:encoded><![CDATA[<img src="https://litos.vercel.app/_astro/cover.Do3E5r53_Z1UoMh2.webp" alt="Photos Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
+      <content:encoded><![CDATA[<img src="https://mica2727.github.io/_astro/cover.Do3E5r53_Z1UoMh2.webp" alt="Photos Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
 <p>This document describes the current implementation of the Photos page.</p>
 <h2>Current file structure</h2>
 <ul>

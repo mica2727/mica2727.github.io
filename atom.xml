@@ -1,0 +1,1729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/rss/atom-styles.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Litos</title>
+  <subtitle>Litos is a modern blogging theme built on Astro.js, designed for developers. It supports multiple post layouts, photo displays, project displays, and more, providing an elegant user experience and powerful customization capabilities.</subtitle>
+  <link href="https://litos.vercel.app//atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://litos.vercel.app/" rel="alternate" type="text/html"/>
+  <updated>2026-10-10T12:49:56.572Z</updated>
+  <language>en</language>
+  <id>https://litos.vercel.app//</id>
+  <author>
+    <name>Dnzzk2</name>
+    <uri>https://litos.vercel.app/</uri>
+  </author>
+  <generator uri="https://github.com/Dnzzk2/Litos" version="5.0">Astro Litos Theme</generator>
+  <rights>Copyright © 2026 Dnzzk2</rights>
+  
+  <entry>
+    <title>How to get started with this theme</title>
+    <link href="https://litos.vercel.app//posts/start" rel="alternate" type="text/html"/>
+    <id>https://litos.vercel.app//posts/start</id>
+    <updated>2025-08-15T00:00:00.000Z</updated>
+    <published>2025-08-15T00:00:00.000Z</published>
+    <author>
+      <name>Dnzzk2</name>
+    </author>
+    <summary type="text">Quick start for the Litos theme: prerequisites, fork-or-template setup, and next steps.</summary>
+    <content type="html"><![CDATA[<img src="https://litos.vercel.app/_astro/cover.7-E_J0u9_Z19SPhO.webp" alt="How to get started with this theme" style="width: 100%; height: auto; margin-bottom: 1em;" />
+<p>This theme was developed during my free time, and the documentation may not be comprehensive enough, but I will try my best to explain it.</p>
+<h3>Prerequisite</h3>
+<p>Before starting, ensure you have the following tools installed in your development environment:</p>
+<ul>
+<li><a href="https://nodejs.org/en/download" rel="noopener noreferrer" target="_blank">Node.js</a> - Required for running the development environment.</li>
+<li><a href="https://pnpm.io/installation" rel="noopener noreferrer" target="_blank">pnpm</a> - Our preferred package manager for dependency management.</li>
+<li><a href="https://git-scm.com/" rel="noopener noreferrer" target="_blank">Git</a> - For version control and project management.</li>
+<li><a href="https://code.visualstudio.com/" rel="noopener noreferrer" target="_blank">VS Code</a> - Recommended code editor with excellent development experience.</li>
+</ul>
+<div><div><div></div><div>NOTE</div></div><div><p>If you have other alternative tools, then you don’t need to follow the recommendations in this article.</p></div></div>
+<h3>Startup project</h3>
+<p>There are two ways to do this:</p>
+<ul>
+<li><a href="https://github.com/Dnzzk2/Litos/fork" rel="noopener noreferrer" target="_blank">Fork the repository</a></li>
+<li><a href="https://github.com/Dnzzk2/Litos/generate" rel="noopener noreferrer" target="_blank">Use this template</a> - In the future, content-free branches will be launched, which do not require deleting and replacing content.</li>
+</ul>
+<p>After you have your own repository, you can clone it to your local machine.</p>
+<h3>Update Theme</h3>
+<p>When the theme releases a new version, you can pull the latest changes without losing your content by following these steps:</p>
+<p><strong>1. Add upstream remote (only needed once)</strong></p>
+<pre><code>git remote add upstream https://github.com/Dnzzk2/Litos.git
+</code></pre>
+<p><strong>2. Fetch and merge the latest theme</strong></p>
+<pre><code>git fetch upstream
+git merge upstream/main --no-edit
+</code></pre>
+<p><strong>3. Resolve conflicts (if any)</strong></p>
+<p>Conflicts typically only occur in files you have modified, such as <code>src/config.ts</code>. In that case, just keep your own configuration and accept the rest of the theme updates.</p>
+<div><div><div></div><div>TIP</div></div><div><p>To minimize conflicts, try to only modify the following files:</p><ul>
+<li><code>src/config.ts</code> — Site configuration</li>
+<li><code>src/content/</code> — Your posts and projects</li>
+<li><code>public/</code> — Your static assets (favicon, images, etc.)</li>
+<li><code>.env</code> — Environment variables</li>
+</ul><p>Avoid modifying theme source files (components, styles, layouts) directly. This ensures smooth updates every time.</p></div></div>
+<h3>End</h3>
+<p>The following documents will be divided into pages, such as readme, posts…</p>]]></content>
+    <category term="Litos" />
+    <category term="Documentation" />
+  </entry>
+  <entry>
+    <title>Readme Page Config</title>
+    <link href="https://litos.vercel.app//posts/readme" rel="alternate" type="text/html"/>
+    <id>https://litos.vercel.app//posts/readme</id>
+    <updated>2025-08-14T00:00:00.000Z</updated>
+    <published>2025-08-14T00:00:00.000Z</published>
+    <author>
+      <name>Dnzzk2</name>
+    </author>
+    <summary type="text">Configure Readme page modules (site, header/footer links, social, GitHub, skills) with field docs and examples.</summary>
+    <content type="html"><![CDATA[<img src="https://litos.vercel.app/_astro/cover.DMtFtdkY_ZeJxeL.webp" alt="Readme Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
+<p>The following files are compatible with this document:</p>
+<ul>
+<li><code>src/pages/index.astro</code> - readme page.</li>
+<li><code>src/config.ts</code> - readme page config.</li>
+<li><code>src/components/base</code> - most of the components come from here.</li>
+</ul>
+<h3>Site Config</h3>
+<p>Configure basic site information:</p>
+<pre><code>export const SITE: Site = {
+  title: 'Litos',
+  description: 'Litos is a blog theme built with Astro.js and Dnzzk2.',
+  website: 'https://litos.vercel.app/',
+  lang: 'en',
+  base: '/',
+  author: 'Dnzzk2',
+  ogImage: '/og-image.jpg',
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody><tr><td>title</td><td>The title of the site.</td></tr><tr><td>description</td><td>The description of the site.</td></tr><tr><td>website</td><td>Your final, deployed URL. Astro uses this full URL to generate your sitemap and canonical URLs in your final build. It is strongly recommended that you set this configuration to get the most out of Astro.</td></tr><tr><td>lang</td><td>The lang global attribute helps define the language of an element.</td></tr><tr><td>base</td><td>The base path to deploy to. Astro will use this path as the root for your pages and assets both in development and in production build. <br /> When you set it to <code>/docs</code>, astro dev will start your server at <code>/docs</code>.</td></tr><tr><td>author</td><td>The author of the site.</td></tr><tr><td>ogImage</td><td>The Open Graph images of the site, but on the specific post page, you can use other ogImage instead.</td></tr></tbody></table>
+<h3>Header Links</h3>
+<p>Top jump link component configuration:</p>
+<pre><code>export const HEADER_LINKS: Link[] = [
+  {
+    name: 'Posts',
+    url: '/posts',
+  },
+]
+</code></pre>
+<h3>Footer Links</h3>
+<p>Footer link component configuration:</p>
+<pre><code>export const FOOTER_LINKS: Link[] = [
+  {
+    name: 'Readme',
+    url: '/',
+  },
+]
+</code></pre>
+<h3>Social Links</h3>
+<p>In the readme page, you can see a string of icons below the theme introduction, which can be configured below. Icons are from <a href="https://icon-sets.iconify.design/" rel="noopener noreferrer" target="_blank">Iconify</a>.</p>
+<pre><code>export const SOCIAL_LINKS: SocialLink[] = [
+  {
+    name: 'github',
+    url: 'https://github.com/yourname',
+    icon: 'icon-[ri--github-fill]',
+    count: 11,
+  },
+  {
+    name: 'twitter',
+    url: 'https://x.com/yourname',
+    icon: 'icon-[ri--twitter-x-fill]',
+  },
+]
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody><tr><td>name</td><td>The name of the social link.</td></tr><tr><td>url</td><td>The URL of the social link.</td></tr><tr><td>icon</td><td>The icon of the social link.</td></tr><tr><td>count</td><td>The number of followers of this social media link. This is an <code>optional</code> field.</td></tr></tbody></table>
+<h3>Spotlight</h3>
+<pre><code>export const GITHUB_CONFIG: GithubConfig = {
+  ENABLED: true,
+  GITHUB_USERNAME: 'Dnzzk2',
+  TOOLTIP_ENABLED: true,
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody><tr><td>ENABLED</td><td>Whether to enable GitHub features.</td></tr><tr><td>GITHUB_USERNAME</td><td>The GitHub username to fetch data.</td></tr><tr><td>TOOLTIP_ENABLED</td><td>Whether to enable Github Tooltip (the cursor hover card) features.</td></tr></tbody></table>
+<h3>Skills</h3>
+<p>On the readme page, you can see a skill display area where you can showcase your skills by configuring the following code:</p>
+<pre><code>export const SKILLSSHOWCASE_CONFIG: SkillsShowcaseConfig = {
+  SKILLS_ENABLED: true,
+  SKILLS_DATA: [
+    {
+      direction: 'left',
+      skills: [
+        {
+          name: 'JavaScript',
+          icon: 'icon-[mdi--language-javascript]',
+        },
+        {
+          name: 'CSS',
+          icon: 'icon-[mdi--language-css3]',
+        },
+        {
+          name: 'HTML',
+          icon: 'icon-[mdi--language-html5]',
+        },
+        {
+          name: 'TypeScript',
+          icon: 'icon-[mdi--language-typescript]',
+        },
+      ],
+    },
+  ],
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody><tr><td>SKILLS_ENABLED</td><td>Whether to enable SkillsShowcase features.</td></tr><tr><td>SKILLS_DATA</td><td>The data of the skills. A single object represents a row.</td></tr><tr><td>    direction</td><td>Each animation runs in two directions: <code>left</code> and <code>right</code>.</td></tr><tr><td>    skills</td><td>The skills array.</td></tr><tr><td>        name</td><td>The name of the skill.</td></tr><tr><td>        icon</td><td>The icon of the skill. Icons are from <a href="https://icon-sets.iconify.design/" rel="noopener noreferrer" target="_blank">Iconify</a>.</td></tr></tbody></table>
+<div><div><div></div><div>TIP</div></div><div><p>It is recommended to run the project locally and check its effectiveness. It is suggested to have at least three different skills per line.</p></div></div>
+<h3>Posts</h3>
+<p>Here, we mainly display pinned posts. If there are no pinned posts, we will display the latest number of <code>size</code> posts based on <code>POSTS_CONFIG</code>.</p>]]></content>
+    <category term="Litos" />
+    <category term="Documentation" />
+  </entry>
+  <entry>
+    <title>Posts Page Config</title>
+    <link href="https://litos.vercel.app//posts/posts" rel="alternate" type="text/html"/>
+    <id>https://litos.vercel.app//posts/posts</id>
+    <updated>2025-08-13T00:00:00.000Z</updated>
+    <published>2025-08-13T00:00:00.000Z</published>
+    <author>
+      <name>Dnzzk2</name>
+    </author>
+    <summary type="text">Complete Posts configuration: fields, list styles, post metadata layouts, OG image handling, frontmatter examples, markdown syntax, and expressive-code config.</summary>
+    <content type="html"><![CDATA[<img src="https://litos.vercel.app/_astro/cover.DuEOlrCu_2kyEMp.webp" alt="Posts Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
+<p>The following files are compatible with this document:</p>
+<ul>
+<li><code>src/pages/posts/[...id].astro</code> - post specific content display page.</li>
+<li><code>src/pages/posts/[...page].astro</code> - post list page.</li>
+<li><code>src/content/posts</code> - posts collection</li>
+<li><code>src/content.config.ts</code> - posts dataset and frontmatter configuration.</li>
+<li><code>ec.config.mjs</code> - expressiveCode config.</li>
+<li><code>plugins/index.ts</code> - remark and rehype plugins.</li>
+<li><code>src/config.ts</code> - posts page config.</li>
+<li><code>src/components/posts</code> - most of the components come from here.</li>
+</ul>
+<h3>Posts Page Config</h3>
+<p>The posts page config is configured in the following code:</p>
+<pre><code>export const POSTS_CONFIG: PostConfig = {
+  title: 'Posts',
+  description: 'Posts by Dnzzk2',
+  introduce: 'Here, I will share the usage instructions for this theme to help you quickly use it.',
+  author: 'Dnzzk2',
+  homePageConfig: {
+    size: 3,
+    type: 'compact',
+  },
+  postPageConfig: {
+    size: 10,
+    type: 'minimal',
+  },
+  tagsPageConfig: {
+    size: 10,
+    type: 'time-line',
+  },
+  ogImageUseCover: false,
+  postType: 'metaOnly',
+  imageDarkenInDark: true,
+  readMoreText: 'Read more',
+  prevPageText: 'Previous',
+  nextPageText: 'Next',
+  tocText: 'On this page',
+  backToPostsText: 'Back to Posts',
+  nextPostText: 'Next Post',
+  prevPostText: 'Previous Post',
+  recommendText: 'REC',
+}
+</code></pre>
+<p>There are a few configuration attributes, please refer to the table below for details.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody><tr><td>title</td><td>Title displayed on browser tags and title displayed on list pages.</td></tr><tr><td>description</td><td>The metadata description in the <code>head</code> element of the list page.</td></tr><tr><td>introduce</td><td>The introduce below the title on the list page.</td></tr><tr><td>author</td><td>The author of the posts.</td></tr><tr><td>homePageConfig</td><td><strong>readme page</strong> configuration.</td></tr><tr><td>    size</td><td>The number of posts displayed on the <strong>readme page</strong>.</td></tr><tr><td>    type</td><td>In the <strong>read page</strong>, the style of displaying data in a list , <code>compact</code> 、<code>minimal</code> 、<code>time-line</code> or <code>image</code>.</td></tr><tr><td>    coverLayout <br />    (optional)</td><td>When the type is image, this attribute can set the position of the image in the card. You can choose left or right. If not set, it will appear alternately on the left and right.</td></tr><tr><td>postPageConfig</td><td>Same as homePageConfig above, but size represents the base number of pages and is used for <strong>post pages</strong>.</td></tr><tr><td>tagsPageConfig</td><td>Same as homePageConfig above, but size represents the base number of pages and is used for <strong>tag pages</strong>.</td></tr><tr><td>ogImageUseCover</td><td>Whether to use the cover image as the Open Graph image.</td></tr><tr><td>postType</td><td>The default display component for the top metadata of the post’s specific content display page.You can configure <code>metaOnly</code>、 <code>coverSplit</code>、<code>coverTop</code>. <br /> Can be replaced by frontmatter settings for content.</td></tr><tr><td>imageDarkenInDark</td><td>Whether to darken the image in the dark mode.</td></tr><tr><td>readMoreText</td><td>The text of the read more button.</td></tr><tr><td>prevPageText</td><td>The text of the previous page button.</td></tr><tr><td>nextPageText</td><td>The text of the next page button.</td></tr><tr><td>tocText</td><td>Title text of the directory</td></tr><tr><td>backToPostsText</td><td>The text of the back to posts button.</td></tr><tr><td>nextPostText</td><td>The text of the next post button.</td></tr><tr><td>prevPostText</td><td>The text of the previous post button.</td></tr><tr><td>recommendText</td><td>The text of the recommend tag.</td></tr></tbody></table>
+<h4>Type &amp; PostType</h4>
+<p>In the above document, we mentioned configurable <code>types</code> for configuring the display style of list data on the readme page, posts page, and tags page, as well as configurable <code>postTypes</code> for displaying metadata at the top of the posts content page.</p>
+<p>Here is the specific style display of <code>type</code>:</p>
+<figure><img src="https://litos.vercel.app/_astro/compact-black.DMCWHrjD_2evXXq.webp" alt="" class="img-light" /><figcaption>compact</figcaption></figure>
+<figure><img src="https://litos.vercel.app/_astro/timeLine-black.jDSZqIn4_Z2hp2Yv.webp" alt="" class="img-light" /><figcaption>time-line</figcaption></figure>
+<figure><img src="https://litos.vercel.app/_astro/minimal-black.Dxsrn9wb_1l0yun.webp" alt="" class="img-light" /><figcaption>minimal</figcaption></figure>
+<figure><img src="https://litos.vercel.app/_astro/image-black.BeMdDApH_ZV1j5H.webp" alt="" class="img-light" /><figcaption>image</figcaption></figure>
+<p>Here is the specific style display of <code>postType</code>:</p>
+<figure><img src="https://litos.vercel.app/_astro/metaOnly-black.CAi7aUXH_2gkuT1.webp" alt="" class="img-light" /><figcaption>metaOnly</figcaption></figure>
+<figure><img src="https://litos.vercel.app/_astro/coverTop-black.Cji_8Dx0_2wd6Gt.webp" alt="" class="img-light" /><figcaption>coverTop</figcaption></figure>
+<figure><img src="https://litos.vercel.app/_astro/coverSplit-black.BGSoc6qf_1NdheF.webp" alt="" class="img-light" /><figcaption>coverSplit</figcaption></figure>
+<h3>Frontmatter</h3>
+<p>After discussing the external list and overall design of the post, let’s take a look at the content of the post together. These contents are all in the <code>src/content/posts</code> folder.</p>
+<p>Below is the frontmatter of the post content:</p>
+<pre><code>---
+title: 'Litos: Posts Page Config'
+description: ''
+pubDate: 2025-08-13
+author: 'Dnzzk2'
+recommend: true
+tags: ['Litos', 'Documentation']
+---
+</code></pre>
+<p>You can configure the frontmatter of the post content in the following code:</p>
+<pre><code>const posts = defineCollection({
+  loader: glob({
+    pattern: '**/*.{md,mdx}',
+    base: './src/content/posts',
+  }),
+  schema: ({ image }) =&gt;
+    z
+      .object({
+        title: z.string(),
+        description: z.string(),
+        pubDate: z.date(),
+        tags: z.array(z.string()).optional(),
+        updatedDate: z.date().optional(),
+        author: z.string().default(POSTS_CONFIG.author),
+        cover: image().optional(),
+        ogImage: image().optional(),
+        recommend: z.boolean().default(false),
+        postType: z.custom&lt;PostType&gt;().optional(),
+        coverLayout: z.custom&lt;CoverLayout&gt;().optional(),
+        pinned: z.boolean().default(false),
+        draft: z.boolean().default(false),
+      })
+      .transform((data) =&gt; ({
+        ...data,
+        ogImage: data.ogImage ? data.ogImage : POSTS_CONFIG.ogImageUseCover &amp;&amp; data.cover ? data.cover : undefined,
+      })),
+})
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody><tr><td>title</td><td>Title of the post.</td></tr><tr><td>description</td><td>Overview of the content of the post, also used for SEO.</td></tr><tr><td>pubDate</td><td>Post release date.</td></tr><tr><td>tags</td><td>List of tags for posts</td></tr><tr><td>updatedDate</td><td>Latest update date of the post. <br /> In the sorting of the post list, the priority value is greater than the publication date.</td></tr><tr><td>author</td><td>The author of the post.</td></tr><tr><td>cover</td><td>When the type of the list is <code>image</code>, the cover image used for display, or the cover image displayed at the top of the postType <code>coverSplit</code> or <code>coverTop</code></td></tr><tr><td>ogImage</td><td>The Open Graph image of the post.</td></tr><tr><td>recommend</td><td>Whether to display the recommend tag.</td></tr><tr><td>postType</td><td>The display component for the top metadata of the post’s specific content display page. You can configure <code>metaOnly</code>、 <code>coverSplit</code>、<code>coverTop</code></td></tr><tr><td>coverLayout</td><td>When the type is <code>image</code>, this attribute can set the position of the image in the card. You can choose <code>left</code> or <code>right</code>. If not set, it will appear alternately on the left and right.</td></tr><tr><td>pinned</td><td>Whether to top the post.</td></tr><tr><td>draft</td><td>Whether to hide the post.</td></tr></tbody></table>
+<div><div><div></div><div>TIP</div></div><div><p>Regarding <code>cover</code> and <code>ogImage</code>.</p><p><code>Cover</code> and <code>ogImage</code> are two independent attributes, and the only one that can connect them is <code>POSTS_CONFIG.ogImageUseCover</code>.</p><p><code>POSTS_CONFIG.ogImageUseCover</code> is enabled by default, so you only need to write <code>cover</code> to configure <code>ogImage</code> at the same time. This applies to situations where the <code>cover</code> and <code>ogImage</code> are the same. If you want to customize <code>ogImage</code>, you can set it separately.</p><p>If <code>POSTS_CONFIG.ogImageUseCover</code> is not enabled, <code>ogImage</code> needs to be set separately. If you do not set it, the site’s <code>ogImage</code> will be used as a fallback.</p><p><code>POSTS_CONFIG.ogImageUseCover</code> &gt; <code>cover</code></p></div></div>
+<hr />
+<h3>Syntax and Code Style</h3>
+<p>This guide will show you how to format text using Markdown through a 3-day city trip itinerary. Learn Markdown while planning your journey!</p>
+<h4>Heading Levels</h4>
+<p>For travel notes, multiple heading levels help organize days, time blocks, and tips:</p>
+<pre><code># 3-Day City Trip Itinerary
+
+## Day 1: Arrival &amp; Old Town
+
+### Morning Plan
+
+#### Coffee Stops
+
+##### Metro Tips
+
+###### Notes
+</code></pre>
+<h4>Text Formatting</h4>
+<p>When writing travel notes, highlight important info:</p>
+<p><strong>Must-see spots</strong> should be bold
+<em>Flexible time</em> uses italics
+<strong><em>Critical cautions</em></strong> can use both
+Optional detours use strikethrough</p>
+<pre><code>**Must-see spots** should be bold
+_Flexible time_ uses italics
+**_Critical cautions_** can use both
+~~Optional detours~~ use strikethrough
+</code></pre>
+<h4>Packing List (Unordered List)</h4>
+<ul>
+<li>Passport, visa</li>
+<li>Camera, extra battery
+<ul>
+<li>Bring a fast charger</li>
+<li>Spare SD card</li>
+</ul>
+</li>
+<li>Refillable water bottle</li>
+<li>Public transport card</li>
+</ul>
+<pre><code>- Passport, visa
+- Camera, extra battery
+  - Bring a fast charger
+  - Spare SD card
+- Refillable water bottle
+- Public transport card
+</code></pre>
+<h4>Day 1 Schedule (Ordered List)</h4>
+<ol>
+<li>Airport → hotel check-in</li>
+<li>Old Town walking tour</li>
+<li>Evening river cruise
+<ol>
+<li>Arrive 15 min early</li>
+<li>Queue at Gate B</li>
+<li>Window seats recommended</li>
+</ol>
+</li>
+</ol>
+<pre><code>1. Airport → hotel check-in
+2. Old Town walking tour
+3. Evening river cruise
+   1. Arrive 15 min early
+   2. Queue at Gate B
+   3. Window seats recommended
+</code></pre>
+<h4>Blockquotes</h4>
+<blockquote><p>Traveler tip: Buy a 24‑hour metro pass if you plan 3+ rides in a day.</p><p>Save the hotel address in offline maps for quick access.</p></blockquote>
+<pre><code>&gt; Traveler tip: Buy a 24‑hour metro pass if you plan 3+ rides in a day.
+&gt;
+&gt; Save the hotel address in offline maps for quick access.
+</code></pre>
+<h4>Code Blocks</h4>
+<p>Use simple code to estimate budget:</p>
+<pre><code>type Budget = { flight: number; hotel: number; meals: number; transport: number }
+export const total = (b: Budget) =&gt; b.flight + b.hotel + b.meals + b.transport
+
+console.log(total({ flight: 1200, hotel: 450, meals: 180, transport: 60 })) // 1890
+</code></pre>
+<h4>Tables</h4>
+<p>Sample schedule:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Time</th><th>Place</th><th>Notes</th></tr></thead><tbody><tr><td>09:00</td><td>Old Town Square</td><td>Guided walking tour</td></tr><tr><td>12:30</td><td>Riverside Cafe</td><td>Lunch + short rest</td></tr><tr><td>18:00</td><td>City Pier</td><td>Sunset cruise</td></tr></tbody></table>
+<h4>Links and Images</h4>
+<p>More tips: <a href="https://example.com/travel" rel="noopener noreferrer" target="_blank">Official Tourism Board</a></p>
+<p>Trip photo:
+<img src="https://litos.vercel.app/_astro/home.DfiDpdST_gTJAi.webp" alt="City skyline" style="width:50%" /></p>
+<h4>Horizontal Rule</h4>
+<hr />
+<h4>Inline Code</h4>
+<p>Metro line <code>A</code> runs every <code>5-7 minutes</code> during peak hours.</p>
+<h4>Math Formulas</h4>
+<p>Daily budget estimation: <span><span>budget=hotel+meals+transportbudget = hotel + meals + transport</span><span><span><span></span><span>b</span><span>u</span><span>d</span><span>g</span><span>e</span><span>t</span><span></span><span>=</span><span></span></span><span><span></span><span>h</span><span>o</span><span>t</span><span>e</span><span>l</span><span></span><span>+</span><span></span></span><span><span></span><span>m</span><span>e</span><span>a</span><span>l</span><span>s</span><span></span><span>+</span><span></span></span><span><span></span><span>t</span><span>r</span><span>an</span><span>s</span><span>p</span><span>or</span><span>t</span></span></span></span></p>
+<p>Total trip:</p>
+<span><span><span>Total Budget=∑d=13(Hoteld+Mealsd+Transportd)Total\ Budget = \sum_{d=1}^{3} (Hotel_d + Meals_d + Transport_d)</span><span><span><span></span><span>T</span><span>o</span><span>t</span><span>a</span><span>l</span><span> </span><span>B</span><span>u</span><span>d</span><span>g</span><span>e</span><span>t</span><span></span><span>=</span><span></span></span><span><span></span><span><span><span><span><span><span></span><span><span><span>d</span><span>=</span><span>1</span></span></span></span><span><span></span><span><span>∑</span></span></span><span><span></span><span><span><span>3</span></span></span></span></span><span>​</span></span><span><span><span></span></span></span></span></span><span>(</span><span>H</span><span>o</span><span>t</span><span>e</span><span><span>l</span><span><span><span><span><span><span></span><span><span>d</span></span></span></span><span>​</span></span><span><span><span></span></span></span></span></span></span><span></span><span>+</span><span></span></span><span><span></span><span>M</span><span>e</span><span>a</span><span>l</span><span><span>s</span><span><span><span><span><span><span></span><span><span>d</span></span></span></span><span>​</span></span><span><span><span></span></span></span></span></span></span><span></span><span>+</span><span></span></span><span><span></span><span>T</span><span>r</span><span>an</span><span>s</span><span>p</span><span>or</span><span><span>t</span><span><span><span><span><span><span></span><span><span>d</span></span></span></span><span>​</span></span><span><span><span></span></span></span></span></span></span><span>)</span></span></span></span></span>
+<h4>Task Lists</h4>
+<p>Pre-trip checklist:</p>
+<ul>
+<li> Book flights</li>
+<li> Reserve hotel</li>
+<li> Buy metro pass</li>
+<li> Download offline maps</li>
+</ul>
+<h4>Footnotes</h4>
+<p>This itinerary draws on local travel guides(click to the footnote) <sup><a href="#user-content-fn-1">1</a></sup>.</p>
+<hr />
+<h3>Expressive-code config</h3>
+<p>In Markdown documents, we use code blocks to display code snippets and other content. This document explains how to customize the code block configuration.</p>
+<p>The code blocks in this theme are configured using <a href="https://expressive-code.com/" rel="noopener noreferrer" target="_blank">Expressive Code</a> with all configuration options defined in the <code>ec.config.mjs</code> file. Below is the main configuration options:</p>
+<pre><code>import { defineEcConfig } from 'astro-expressive-code'
+import { pluginCollapsibleSections } from '@expressive-code/plugin-collapsible-sections'
+import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
+
+export default defineEcConfig({
+  defaultLocale: 'zh-CN',
+  defaultProps: {
+    wrap: false,
+    collapseStyle: 'collapsible-auto',
+    showLineNumbers: false,
+    preserveIndent: true,
+  },
+  minSyntaxHighlightingColorContrast: 0,
+
+  styleOverrides: {
+    uiFontFamily: 'GeistMono, Input Mono, Fira Code, ShangguSansSCVF, monospace',
+    uiFontSize: '1em',
+    codeFontFamily: 'GeistMono, Input Mono, Fira Code, ShangguSansSCVF, monospace',
+    codeFontSize: '14px',
+    codeLineHeight: '1.4',
+    borderRadius: '0',
+    codePaddingBlock: '0.8571429em',
+    codePaddingInline: '1.1428571em',
+    borderColor: ({ theme }) =&gt; (theme.type === 'dark' ? '#24273a' : '#e6e9ef'),
+
+    frames: {
+      frameBoxShadowCssValue: false,
+      inlineButtonBackgroundActiveOpacity: '0.2',
+      inlineButtonBackgroundHoverOrFocusOpacity: '0.1',
+    },
+    textMarkers: {
+      backgroundOpacity: '0.2',
+      borderOpacity: '0.4',
+    },
+  },
+
+  plugins: [
+    pluginCollapsibleSections({
+      defaultCollapsed: false,
+    }),
+    pluginLineNumbers(),
+  ],
+
+  themes: ['catppuccin-macchiato', 'catppuccin-latte'],
+  themeCssSelector: (theme) =&gt; (theme.name === 'catppuccin-macchiato' ? '.dark' : ':root:not(.dark)'),
+  useDarkModeMediaQuery: false,
+  useStyleReset: false,
+})
+</code></pre>
+<p>You can go to the website to view the configuration options of expressive-code.</p>
+<hr />
+<h3>Comment System (Gitalk)</h3>
+<p>The theme has a built-in <a href="https://github.com/gitalk/gitalk" rel="noopener noreferrer" target="_blank">Gitalk</a> comment system that uses GitHub Issues as the comment backend. Each post automatically gets its own issue for comments.</p>
+<h4>Prerequisites</h4>
+<p>You need to create a <strong>GitHub OAuth App</strong> first:</p>
+<ol>
+<li>Go to <a href="https://github.com/settings/developers" rel="noopener noreferrer" target="_blank">GitHub Developer Settings</a> → <strong>OAuth Apps</strong> → <strong>New OAuth App</strong>.</li>
+<li>Fill in the form:
+<ul>
+<li><strong>Application name</strong>: Any name (e.g. <code>My Blog Comments</code>)</li>
+<li><strong>Homepage URL</strong>: Your site URL (e.g. <code>https://yourdomain.com</code>)</li>
+<li><strong>Authorization callback URL</strong>: Same as your site URL</li>
+</ul>
+</li>
+<li>After creation, copy the <strong>Client ID</strong> and generate a <strong>Client Secret</strong>.</li>
+<li>Create a <strong>public repository</strong> on GitHub to store comment issues (e.g. <code>blog-comments</code>).</li>
+</ol>
+<h4>Configuration</h4>
+<p>Configure the comment system in <code>src/config.ts</code>:</p>
+<pre><code>export const COMMENT_CONFIG: CommentConfig = {
+  enabled: true,
+  system: 'gitalk',
+  gitalk: {
+    clientID: import.meta.env.PUBLIC_GITHUB_CLIENT_ID,
+    clientSecret: import.meta.env.PUBLIC_GITHUB_CLIENT_SECRET,
+    repo: 'blog-comments',
+    owner: 'YourGitHubUsername',
+    admin: ['YourGitHubUsername'],
+    language: 'en-US',
+    perPage: 5,
+    pagerDirection: 'last',
+    createIssueManually: false,
+    distractionFreeMode: false,
+    enableHotKey: true,
+  },
+}
+</code></pre>
+<p>Then set the environment variables. Create a <code>.env</code> file in the project root (refer to <code>.env.example</code>):</p>
+<pre><code>PUBLIC_GITHUB_CLIENT_ID=your-github-client-id
+PUBLIC_GITHUB_CLIENT_SECRET=your-github-client-secret
+</code></pre>
+<h4>Config Properties</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody><tr><td>enabled</td><td>Whether to enable the comment system.</td></tr><tr><td>system</td><td>Comment system to use. Options: <code>gitalk</code>, <code>none</code>.</td></tr><tr><td>clientID</td><td>GitHub OAuth App Client ID.</td></tr><tr><td>clientSecret</td><td>GitHub OAuth App Client Secret.</td></tr><tr><td>repo</td><td>The GitHub repository name for storing comment issues.</td></tr><tr><td>owner</td><td>The GitHub username of the repository owner.</td></tr><tr><td>admin</td><td>Array of GitHub usernames who can initialize comment issues.</td></tr><tr><td>language</td><td>Display language. e.g. <code>en-US</code>, <code>zh-CN</code>, <code>zh-TW</code>.</td></tr><tr><td>perPage</td><td>Number of comments per page.</td></tr><tr><td>pagerDirection</td><td>Comment sorting direction. <code>last</code> (newest first) or <code>first</code> (oldest first).</td></tr><tr><td>createIssueManually</td><td>If <code>true</code>, issues must be created manually. If <code>false</code>, auto-created on first visit by admin.</td></tr><tr><td>distractionFreeMode</td><td>If <code>true</code>, enables full-screen overlay when typing a comment.</td></tr><tr><td>enableHotKey</td><td>Whether to enable <code>Cmd/Ctrl + Enter</code> shortcut to submit comments.</td></tr></tbody></table>
+<div><div><div></div><div>NOTE</div></div><div><p>To disable comments entirely, set <code>enabled: false</code> or <code>system: 'none'</code> in <code>COMMENT_CONFIG</code>.</p></div></div>
+<div><div><div></div><div>CAUTION</div></div><div><p>The <code>clientID</code> and <code>clientSecret</code> are read from environment variables via <code>import.meta.env</code>. Make sure to add <code>.env</code> to your <code>.gitignore</code> file (already included by default) to avoid leaking secrets.</p></div></div>
+<section><h2>Footnotes</h2>
+<ol>
+<li>
+<p>City Tourism Guide, 2024 Edition. (click back to the text) <a href="#user-content-fnref-1">↩</a></p>
+</li>
+</ol>
+</section>]]></content>
+    <category term="Litos" />
+    <category term="Documentation" />
+  </entry>
+  <entry>
+    <title>Markdown enhanced syntax</title>
+    <link href="https://litos.vercel.app//posts/enhance" rel="alternate" type="text/html"/>
+    <id>https://litos.vercel.app//posts/enhance</id>
+    <updated>2025-08-12T00:00:00.000Z</updated>
+    <published>2025-08-12T00:00:00.000Z</published>
+    <author>
+      <name>Dnzzk2</name>
+    </author>
+    <summary type="text">Enhance Markdown with callouts, Expressive Code blocks, image caption directives, video embeds, styled links, badges, and details.</summary>
+    <content type="html"><![CDATA[<img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="Markdown enhanced syntax" style="width: 100%; height: auto; margin-bottom: 1em;" />
+<p>This guide has made slight changes based on the <a href="https://astro-antfustyle-theme.vercel.app/blog/markdown-mdx-extended-features/" rel="noopener noreferrer" target="_blank">markdown-mdx-extended-features</a>.</p>
+<h2>Callouts</h2>
+<p>Supported by the <a href="https://github.com/lin-stephanie/rehype-callouts" rel="noopener noreferrer" target="_blank">rehype-callouts</a> , you can configure the plugin in <code>plugins/index.ts</code>.</p>
+<p>If you change the <code>theme</code> configuration (default: <code>'vitepress'</code>), you will also need to update the imported CSS file in <code>src/styles/pro.css</code> (<code>@import 'rehype-callouts/theme/yourconfig'</code>).</p>
+<pre><code>&lt;!-- Callout type names are case-insensitive: 'Note', 'NOTE', and 'note' are equivalent. --&gt;
+
+&lt;!-- vitepress --&gt;
+
+&lt;!-- This is a _non-collapsible_ callout --&gt;
+
+&gt; [!note]
+&gt; Note content.
+
+&gt; [!tip]
+&gt; Tip content.
+
+&gt; [!important]
+&gt; Important content.
+
+&gt; [!warning]
+&gt; Warning content.
+
+&gt; [!caution]
+&gt; Caution content.
+
+&gt; [!caution]- This is a **collapsible** callout
+&gt; Caution content.
+
+&gt; [!note]+ This is a **collapsible** callout
+&gt; Note content.
+</code></pre>
+<div><div><div></div><div>NOTE</div></div><div><p>Note <code>content</code>.</p></div></div>
+<div><div><div></div><div>TIP</div></div><div><p>Tip <code>content</code>.</p></div></div>
+<div><div><div></div><div>IMPORTANT</div></div><div><p>Important <code>content</code>.</p></div></div>
+<div><div><div></div><div>WARNING</div></div><div><p>Warning <code>content</code>.</p></div></div>
+<div><div><div></div><div>CAUTION</div></div><div><p>Caution <code>content</code>.</p></div></div>
+<div></div><div>This is a <strong>collapsible</strong> callout</div><div></div><div><p>Caution content.</p></div>
+<div></div><div>This is a <strong>collapsible</strong> callout</div><div></div><div><p>Note content.</p></div>
+<h2>Fully-featured Code Blocks</h2>
+<p>Supported by <a href="https://github.com/expressive-code/expressive-code/tree/main/packages/astro-expressive-code" rel="noopener noreferrer" target="_blank">astro-expressive-code</a> with <a href="https://expressive-code.com/plugins/collapsible-sections/" rel="noopener noreferrer" target="_blank">@expressive-code/plugin-collapsible-sections</a> and <a href="https://expressive-code.com/plugins/line-numbers/" rel="noopener noreferrer" target="_blank">@expressive-code/plugin-line-numbers</a> plugins to add styling and extra functionality for code blocks.</p>
+<p>To customize code block themes or functionality, modify the <code>ec.config.mjs</code> file at the project root after reviewing the <a href="https://expressive-code.com/reference/configuration/" rel="noopener noreferrer" target="_blank">Configuring Expressive Code</a>, such as <a href="https://expressive-code.com/guides/themes/#using-bundled-themes" rel="noopener noreferrer" target="_blank">change themes</a>, <a href="https://expressive-code.com/key-features/word-wrap/#wrap" rel="noopener noreferrer" target="_blank">enable word wrap</a>, or <a href="https://expressive-code.com/plugins/line-numbers/#showlinenumbers" rel="noopener noreferrer" target="_blank">toggle line numbers</a>.</p>
+<p>Here’s a quick preview of what’s possible. Check the <a href="https://expressive-code.com/key-features/syntax-highlighting/" rel="noopener noreferrer" target="_blank">detailed guide</a> for more info.</p>
+<h4>Syntax highlighting</h4>
+<pre><code>console.log('This code is syntax highlighted!')
+</code></pre>
+<pre><code>ANSI colors:
+- Regular: Red Green Yellow Blue Magenta Cyan
+- Bold:    Red Green Yellow Blue Magenta Cyan
+- Dimmed:  Red Green Yellow Blue Magenta Cyan
+
+256 colors (showing colors 160-177):
+160 161 162 163 164 165
+166 167 168 169 170 171
+172 173 174 175 176 177
+
+Full RGB colors:
+ForestGreen - RGB(34, 139, 34)
+
+Text formatting: Bold Dimmed Italic Underline
+</code></pre>
+<h5>Code editor frames</h5>
+<pre><code>// Use `title="my-test-file.js"`
+console.log('Title attribute example')
+</code></pre>
+<pre><code>// src/content/index.ts
+// Use `// src/content/index.ts`
+console.log('File name comment example')
+</code></pre>
+<h5>Terminal frames</h5>
+<pre><code>echo "This terminal frame has no title"
+</code></pre>
+<pre><code>Write-Output "This one has a title!"
+</code></pre>
+<h5>Marking full lines &amp; line ranges</h5>
+<pre><code>// Line 1 - targeted by line number
+// Line 2
+// Line 3
+// Line 4 - targeted by line number
+// Line 5
+// Line 6
+// Line 7 - targeted by range "7-8"
+// Line 8 - targeted by range "7-8"
+</code></pre>
+<h5>Selecting line marker types (mark, ins, del)</h5>
+<pre><code>function demo() {
+  console.log('this line is marked as deleted')
+  // This line and the next one are marked as inserted
+  console.log('this is the second inserted line')
+
+  return 'this line uses the neutral default marker type'
+}
+</code></pre>
+<h5>Adding labels to line markers</h5>
+<pre><code>// labeled-line-markers.jsx
+&lt;button role="button" {...props} value={value} className={buttonClassName} disabled={disabled} active={active}&gt;
+  {children &amp;&amp; !active &amp;&amp; (typeof children === 'string' ? &lt;span&gt;{children}&lt;/span&gt; : children)}
+&lt;/button&gt;
+</code></pre>
+<h5>Adding long labels on their own lines</h5>
+<pre><code>// labeled-line-markers.jsx
+&lt;button role="button" {...props} value={value} className={buttonClassName} disabled={disabled} active={active}&gt;
+  {children &amp;&amp; !active &amp;&amp; (typeof children === 'string' ? &lt;span&gt;{children}&lt;/span&gt; : children)}
+&lt;/button&gt;
+</code></pre>
+<h5>Using diff-like syntax</h5>
+<pre><code>+this line will be marked as inserted
+-this line will be marked as deleted
+this is a regular line
+</code></pre>
+<pre><code>  function thisIsJavaScript() {
+    // This entire block gets highlighted as JavaScript,
+    // and we can still add diff markers to it!
+-   console.log('Old code to be removed')
++   console.log('New and shiny code!')
+  }
+</code></pre>
+<h5>Marking individual text inside lines</h5>
+<pre><code>// Plaintext search strings
+function demo() {
+  // Mark any given text inside lines
+  return 'Multiple matches of the given text are supported'
+}
+</code></pre>
+<h5>Marking individual text inside lines</h5>
+<pre><code>// Regular expressions
+console.log('The words yes and yep will be marked.')
+</code></pre>
+<pre><code># Regular expressions
+echo "Test" &gt; /home/test.txt
+</code></pre>
+<pre><code>// Regular expressions
+If you only want to mark certain parts matched by your regular expression, you can use capture groups.
+
+For example, the expression `/ye(s|p)/` will match yes and yep, but only mark the character s or p:
+</code></pre>
+<pre><code>// Regular expressions
+To prevent this special treatment of capture groups, you can convert them to non-capturing groups by adding ?: after the opening parenthesis. For example:
+
+This block uses `/ye(?:s|p)/`, which causes the full
+matching words "yes" and "yep" to be marked.
+</code></pre>
+<pre><code>// Selecting inline marker types (mark, ins, del)
+function demo() {
+  console.log('These are inserted and deleted marker types')
+  // The return statement uses the default marker type
+  return true
+}
+</code></pre>
+<h5>Configuring word wrap per block</h5>
+<pre><code>// Example with wrap
+function getLongString() {
+  return 'This is a very long string that will most probably not fit into the available space unless the container is extremely wide'
+}
+</code></pre>
+<pre><code>// Example with wrap=false
+function getLongString() {
+  return 'This is a very long string that will most probably not fit into the available space unless the container is extremely wide'
+}
+</code></pre>
+<h5>Configuring indentation of wrapped lines</h5>
+<pre><code>// Example with preserveIndent (enabled by default)
+function getLongString() {
+  return 'This is a very long string that will most probably not fit into the available space unless the container is extremely wide'
+}
+</code></pre>
+<pre><code>// Example with preserveIndent=false
+function getLongString() {
+  return 'This is a very long string that will most probably not fit into the available space unless the container is extremely wide'
+}
+</code></pre>
+<h5>Collapsible sections</h5>
+<pre><code>// All this boilerplate setup code will be collapsed
+import { someBoilerplateEngine } from '@example/some-boilerplate'
+import { evenMoreBoilerplate } from '@example/even-more-boilerplate'
+
+const engine = someBoilerplateEngine(evenMoreBoilerplate())
+
+// This part of the code will be visible by default
+engine.doSomething(1, 2, 3, calcFn)
+
+function calcFn() {
+  // You can have multiple collapsed sections
+  const a = 1
+  const b = 2
+  const c = a + b
+
+  // This will remain visible
+  console.log(`Calculation result: ${a} + ${b} = ${c}`)
+  return c
+}
+
+// All this code until the end of the block will be collapsed again
+engine.closeConnection()
+engine.freeMemory()
+engine.shutdown({ reason: 'End of example boilerplate code' })
+</code></pre>
+<h5>Displaying line numbers per block</h5>
+<pre><code>// This code block will show line numbers
+console.log('Greetings from line 2!')
+console.log('I am on line 3')
+</code></pre>
+<pre><code>// Line numbers are disabled for this block
+console.log('Hello?')
+console.log('Sorry, do you know what line I am on?')
+</code></pre>
+<pre><code>// Changing the starting line number
+console.log('Greetings from line 5!')
+console.log('I am on line 6')
+</code></pre>
+<h2>Image Caption &amp; Link</h2>
+<p>Use the <a href="https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#image-" rel="noopener noreferrer" target="_blank"><code>:::image</code></a> directive from <a href="https://github.com/lin-stephanie/remark-directive-sugar" rel="noopener noreferrer" target="_blank">remark-directive-sugar</a> to wrap images in a container for captions, clickable links, and more. Customize via the <code>image</code> option in <code>plugins/index.ts</code> (<code>remarkDirectiveSugar</code>) and style under <code>/* :::image */</code> in <code>src/styles/pro.css</code>.</p>
+<h3>image-figure</h3>
+<p><code>:::image-figure[caption]{&lt;figcaption&gt; attrs}</code>: The square brackets define the <code>&lt;figcaption&gt;</code> text (defaults to the alt text from <code>![]()</code> if omitted), while the curly braces are used for inline styles or supported attributes to the generated <code>&lt;figcaption&gt;</code> element.</p>
+<p><code>![alt](image path)(&lt;img&gt; attrs)</code>: Standard Markdown image with optional attributes in parentheses, enabled by <a href="https://github.com/OliverSpeir/remark-imgattr" rel="noopener noreferrer" target="_blank">remark-imgattr</a>, for customizing the generated <code>&lt;img&gt;</code> element.</p>
+<p><code>:::image-figure[caption]{&lt;figcaption&gt; attrs}</code>: The square brackets define the <code>&lt;figcaption&gt;</code> text (defaults to the alt text from <code>![]()</code> if omitted), while the curly braces are used for inline styles or supported attributes to the generated <code>&lt;figcaption&gt;</code> element.</p>
+<p><code>![alt](image path)(&lt;img&gt; attrs)</code>: Standard Markdown image with optional attributes in parentheses, enabled by <a href="https://github.com/OliverSpeir/remark-imgattr" rel="noopener noreferrer" target="_blank">remark-imgattr</a>, for customizing the generated <code>&lt;img&gt;</code> element.</p>
+<pre><code>:::image-figure[This Is a **Figcaption** with _`&lt;figure&gt;` Attrs_]{style="text-align:center;color:orange"}
+![](assets/cover.png)
+:::
+
+:::image-figure[This is a **figcaption** with _`&lt;img&gt;` attrs_.]
+![](assets/cover.png)(style: width:600px;)
+:::
+
+&lt;!-- 💡 Use `(class:no-zoom)` to disable zoom --&gt;
+
+:::image-figure[This is a **figcaption** with `class:no-zoom`.]
+![](assets/cover.png)(class:no-zoom)
+:::
+
+&lt;!-- 💡 If no `[caption]`, use `[alt]` as figcaption. --&gt;
+
+:::image-figure
+![If `[caption]` not set, the alt text from `![]()` will be used as the figcaption.](assets/cover.png)
+:::
+
+&lt;!-- 💡 Images for light (img-light) and dark (img-dark) modes --&gt;
+&lt;!-- ⚠️ At least one line must separate two image syntaxes (![]()), or won't work. --&gt;
+
+:::image-figure[This example shows different images for light (add `class:img-light`) and dark (add `class:img-dark`) modes.]
+![](assets/image-16-9-light.png)(class:img-light)
+
+![](assets/image-16-9-light.png)(class:img-dark)
+:::
+
+&lt;!-- ❌ If no text is available for the figcaption, it won't work.  --&gt;
+
+:::image-figure
+![](assets/cover.png)
+:::
+</code></pre>
+<figure><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="" /><figcaption>This Is a <strong>Figcaption</strong> with <em><code>&lt;figure&gt;</code> Attrs</em></figcaption></figure>
+<figure><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="" style="width:600px" /><figcaption>This is a <strong>figcaption</strong> with <em><code>&lt;img&gt;</code> attrs</em>.</figcaption></figure>
+<figure><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="" class="no-zoom" /><figcaption>This is a <strong>figcaption</strong> with <code>class:no-zoom</code>.</figcaption></figure>
+<figure><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="If [caption] not set, the alt text from ![]() will be used as the figcaption." /><figcaption>If [caption] not set, the alt text from ![]() will be used as the figcaption.</figcaption></figure>
+<figure><img src="https://litos.vercel.app/_astro/image-black.BeMdDApH_ZV1j5H.webp" alt="" class="img-light" /><figcaption>This example shows different images for light (add <code>class:img-light</code>) and dark (add <code>class:img-dark</code>) modes.</figcaption></figure>
+<div><div><div></div><div>WARNING</div></div><div><p>Setting an image’s <code>width</code> attribute directly may cause blurriness. <a href="https://github.com/Dnzzk2/Litos/discussions/17" rel="noopener noreferrer" target="_blank">Learn more</a></p></div></div>
+<h3>image-a</h3>
+<p>The custom directive wraps an image inside a link, making it clickable.</p>
+<p><code>:::image-a{&lt;a&gt; attrs}</code>: Define the link (href), styles, or classes in the curly braces for <code>&lt;a&gt;</code> element.</p>
+<p><code>![alt](image path)(&lt;img&gt; attrs)</code>: Same as above.</p>
+<pre><code>:::image-a{href="https://github.com/Dnzzk2/Litos"}
+![OG image](assets/cover.png)
+:::
+
+:::image-a{href="https://github.com/Dnzzk2/Litos" style="display:block" .custom-class}
+![OG image](assets/cover.png)(style: margin-bottom: -1rem; transform:scaleX(1.1) scaleY(1.1);, loading: eager)
+:::
+
+::::image-a{href="https://github.com/Dnzzk2/Litos"}
+:::image-figure[This example shows `:::image-a` wraps around `:::image-figure` (both are interchangeable).]
+![OG image](assets/cover.png)
+:::
+::::
+
+&lt;!-- ❌ No external links provided, it won't work.--&gt;
+
+:::image-a
+![OG image](assets/cover.png)
+:::
+</code></pre>
+<a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank"><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" /></a>
+<a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank"><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" style="margin-bottom:-1rem;transform:scaleX(1.1) scaleY(1.1)" /></a>
+<a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank"><figure><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" style="padding-top:1rem" /><figcaption>This example shows <code>:::image-a</code> wraps around <code>:::image-figure</code> (both are interchangeable).</figcaption></figure></a>
+<h3>image-figure-polaroid</h3>
+<p>Polaroid style images with a border and shadow.</p>
+<p>In order to ensure the style size on the phone, I have set a minimum width of 300px, and you can modify and expand the style in <code>src/styles/picture.css</code>.</p>
+<pre><code>:::::image-div-polaroid
+:::image-figure-polaroid[This is a **figcaption** with _`&lt;img&gt;` attrs_.]
+![OG image](assets/cover.png)
+:::
+:::::
+
+:::::image-div-polaroid
+:::image-figure-polaroid
+![OG image](assets/cover.png)
+
+cover.png
+:::
+:::::
+
+:::::image-div-polaroid
+:::image-figure-polaroid
+![OG image](assets/cover.png)
+:::
+:::::
+
+&lt;!-- change style --&gt;
+
+:::::image-div-polaroid
+:::image-figure-polaroid{style="width:500px;"}
+![OG image](assets/cover.png)
+:::
+:::::
+</code></pre>
+<p>This is a <strong>figcaption</strong> with <em><code>&lt;img&gt;</code> attrs</em>.</p><img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" />
+<img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" /><p>cover.png</p>
+<img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" />
+<img src="https://litos.vercel.app/_astro/cover.BKthU1GI_ykCju.webp" alt="OG image" />
+<h2>GitHub Card</h2>
+<p>Congratulations from <a href="https://github.com/oopsunix" rel="noopener noreferrer" target="_blank">oopsunix</a></p>
+<pre><code>::github{repo="Dnzzk2/Litos"}
+</code></pre>
+<div>
+<a href="https://github.com/Dnzzk2/Litos" target="_blank" rel="noopener noreferrer">
+  <div>
+    <div>
+      <div>
+        <div></div>
+        <div>Dnzzk2</div>
+      </div>
+      <div>/</div>
+      <div>Litos</div>
+    </div>
+    <div>
+      
+        
+      
+    </div>
+  </div>
+  <div>Loading...</div>
+  <div>
+    <div>
+      
+        
+      
+      <span>0</span>
+    </div>
+    <div>
+      
+        
+      
+      <span>0</span>
+    </div>
+    <div>
+      
+        
+      
+      <span>-</span>
+    </div>
+  </div>
+</a>
+
+              </div>
+<h2>Video Embedding</h2>
+<p>Use the <a href="https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#video-" rel="noopener noreferrer" target="_blank"><code>::video</code></a> directive from <a href="https://github.com/lin-stephanie/remark-directive-sugar" rel="noopener noreferrer" target="_blank">remark-directive-sugar</a> for consistent video embedding across different platforms. Customize via the <code>video</code> option in <code>plugins/index.ts</code> and style under <code>/* ::video */</code> in <code>src/styles/pro.css</code>.</p>
+<p>Say <code>example.md</code> contains:</p>
+<pre><code>&lt;!-- Embed a YouTube video --&gt;
+
+::video-youtube{#gxBkghlglTg}
+
+&lt;!-- Embed a Bilibili video with a custom `title` attr --&gt;
+
+::video-bilibili[custom title]{id=BV1MC4y1c7Kv}
+
+&lt;!-- Embed a Vimeo video with class `no-scale` to disable scaling --&gt;
+
+::video-vimeo{id=912831806 class='no-scale'}
+
+&lt;!-- ::video-vimeo{id=912831806 .no-scale} --&gt;
+
+&lt;!-- Embed a custom video URL (must use `id`, not `#`) --&gt;
+
+::video{id=https://www.youtube-nocookie.com/embed/gxBkghlglTg}
+</code></pre>
+<p>Then <code>example.mdx</code> renders as:</p>
+
+
+
+
+<h2>Styled Link（<code>:link</code>）</h2>
+<p>Use the <a href="https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#link" rel="noopener noreferrer" target="_blank"><code>:link</code></a> directive from <a href="https://github.com/lin-stephanie/remark-directive-sugar" rel="noopener noreferrer" target="_blank">remark-directive-sugar</a> to add links with avatars or favicons for GitHub, npm, or custom URLs. Customize via the <code>link</code> option in <code>plugins/index.ts</code> and style under <code>/* :link */</code> in <code>src/styles/pro.css</code>.</p>
+<p><strong>Link to a GitHub user or organization (prepend <code>id</code> with <code>@</code>)</strong></p>
+<p><strong>Example 1</strong>: <code>:link[Dnzzk2]{#@Dnzzk2}</code> links to the GitHub profile of the project maintainer, <a href="https://github.com/Dnzzk2" rel="noopener noreferrer" target="_blank">Dnzzk2</a>.</p>
+<p><strong>Example 2</strong>: <code><a href="@vitejs">Vite</a></code> links to the GitHub profile of the <a href="https://github.com/vitejs" rel="noopener noreferrer" target="_blank">Vite</a> organization.</p>
+<p><strong>Example 3</strong>: <code>:link{#@Dnzzk2 tab=repositories}</code> links directly to the repositories tab of the GitHub user, like <a href="https://github.com/Dnzzk2?tab=repositories" rel="noopener noreferrer" target="_blank">Dnzzk2</a>. For GitHub users, valid <code>tab</code> options: <code>'repositories','projects', 'packages', 'stars', 'sponsoring', 'sponsors'</code>.</p>
+<p><strong>Example 4</strong>: <code>:link{#@vitejs tab=org-people}</code> links directly to the people section of a GitHub organization, like <a href="https://github.com/orgs/vitejs/people" rel="noopener noreferrer" target="_blank">vitejs</a>. For GitHub organizations, valid <code>tab</code> options: <code>'org-repositories', 'org-projects', 'org-packages', 'org-sponsoring', and 'org-people'</code>.</p>
+<p><strong>Link to a GitHub repository</strong></p>
+<p><strong>Example 5</strong>: <code>:link[Astro]{#withastro/astro}</code> or <code><a href="withastro/astro">Astro</a></code> creates a link to <a href="https://github.com/withastro/astro" rel="noopener noreferrer" target="_blank">Astro</a> repo.</p>
+<p><strong>Link to an npm package</strong></p>
+<p><strong>Example 6</strong>: <code>:link{#remark-directive-sugar}</code> links to the npm homepage of the <a href="https://www.npmjs.com/package/remark-directive-sugar" rel="noopener noreferrer" target="_blank">remark-directive-sugar</a>.</p>
+<p><strong>Example 7</strong>: <code>:link{id=remark-directive-sugar tab=dependencies}</code> links to the dependencies section of the <a href="https://www.npmjs.com/package/remark-directive-sugar?activeTab=dependencies" rel="noopener noreferrer" target="_blank">remark-directive-sugar</a> on npm. For npm package, valid <code>tab</code> options: <code>'readme', 'code', 'dependencies', 'dependents', and 'versions'</code>.</p>
+<p><strong>Link to a custom URL (must use <code>id</code>, not <code>#</code>)</strong></p>
+<p><strong>Example 8</strong>: <code>:link{id=https://developer.mozilla.org/en-US/docs/Web/JavaScript}</code> creates an external link to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" rel="noopener noreferrer" target="_blank">developer.mozilla.org/en-US/docs/Web...</a>.</p>
+<p><strong>Example 9</strong>: <code><a href="https://www.google.com/">Google</a></code> creates an external link to the <a href="https://www.google.com/" rel="noopener noreferrer" target="_blank">Google</a>.</p>
+<p><strong>Customization</strong></p>
+<p><strong>Example 10</strong>: <code><a href="@vitejs url=https://vite.dev/">Vite</a></code> creates a <a href="https://vite.dev/" rel="noopener noreferrer" target="_blank">Vite</a> to <code>https://vite.dev/</code> instead of <code>https://github.com/vitejs</code> by using the <code>url</code>.</p>
+<p><strong>Example 11</strong>: <code><a href="@vitejs img=https://vitejs.dev/logo.svg">Vite</a></code> creates a <a href="https://github.com/vitejs" rel="noopener noreferrer" target="_blank">Vite</a> that displays a custom logo by using the <code>img</code>.</p>
+<p><strong>Example 12</strong>: <code>:link{id=Dnzzk2/Litos class=github}</code> creates a <a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank">Dnzzk2/Litos</a> with <code>class=github</code> (or <code>.github</code>) to override the default style of a GitHub repository.</p>
+<p><strong>Example 13</strong>: <code><a href="https://github.com/Dnzzk2/Litos img=https://github.githubassets.com/assets/mona-e50f14d05e4b.png">Litos Themes</a></code> fully customizes a link. <a href="https://github.com/Dnzzk2/Litos" rel="noopener noreferrer" target="_blank">Litos Themes</a></p>
+<h2>Badges</h2>
+<p>Use the <a href="https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#badge-" rel="noopener noreferrer" target="_blank"><code>:badge</code></a> directive from <a href="https://github.com/lin-stephanie/remark-directive-sugar" rel="noopener noreferrer" target="_blank">remark-directive-sugar</a> to display small pieces of information, such as status or category.</p>
+<p>The theme provides the following one predefined badges. You can customize them via the <code>badge</code> option in <code>plugins/index.ts</code> and style them under <code>/* :badge */</code> in <code>src/styles/pro.css</code>.</p>
+<ul>
+<li><code>badge-n</code>: <span>NEW</span></li>
+</ul>
+<p>Additionally, you can direct use <code>:badge[text]{attrs}</code> for easy visual customization of badges. For example: <code>:badge[ISSUE]{style="background-color: #bef264"}</code> will display as <span>ISSUE</span>. If no color is specified, the default appearance will look like <span>This</span>.</p>
+<h2>Details Dropdown</h2>
+<pre><code>:::details
+::summary[Details Dropdown]
+
+- List item 1
+- List item 2
+- List item 3
+- List item 4
+  :::
+</code></pre>
+Details Dropdown<ul>
+<li>List item 1</li>
+<li>List item 2</li>
+<li>List item 3</li>
+<li>List item 4</li>
+</ul>
+<p>Additionally, it also supports usage similar to the <a href="https://github.com/remarkjs/remark-directive?tab=readme-ov-file#use" rel="noopener noreferrer" target="_blank">examples in remark-directive</a>.</p>]]></content>
+    <category term="Litos" />
+    <category term="Documentation" />
+  </entry>
+  <entry>
+    <title>Project And Tag Page Config</title>
+    <link href="https://litos.vercel.app//posts/project-tag" rel="alternate" type="text/html"/>
+    <id>https://litos.vercel.app//posts/project-tag</id>
+    <updated>2025-08-11T00:00:00.000Z</updated>
+    <published>2025-08-11T00:00:00.000Z</published>
+    <author>
+      <name>Dnzzk2</name>
+    </author>
+    <summary type="text">Configure Projects and Tags pages: page texts (PROJECTS_CONFIG, TAGS_CONFIG), project content frontmatter, file locations, and usage examples.</summary>
+    <content type="html"><![CDATA[<img src="https://litos.vercel.app/_astro/cover.Cz2psVoH_Z1OReC1.webp" alt="Project And Tag Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
+<p>Due to the small size of the Project and tag page configurations, they are merged into one document.</p>
+<p>The following files are compatible with this document:</p>
+<ul>
+<li><code>src/pages/projects/index.astro</code> - project page.</li>
+<li><code>src/pages/tags/index.astro</code> - tag statistics page.</li>
+<li><code>src/pages/tags/[tag]/[...page].astro</code> - specific tag display post list page.</li>
+<li><code>src/config.ts</code> - project and tag page config.</li>
+<li><code>src/components/base</code> - most of the components come from here.</li>
+</ul>
+<h3>Project Page Config</h3>
+<p>Configure page texts:</p>
+<pre><code>export const PROJECTS_CONFIG: ProjectConfig = {
+  title: 'Projects',
+  description: 'The examples of my projects.',
+  introduce: 'The examples of my projects.',
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody><tr><td>title</td><td>Title displayed on browser tags and title displayed on page.</td></tr><tr><td>description</td><td>The metadata description in the <code>head</code> element of the page.</td></tr><tr><td>introduce</td><td>The introduce below the title on the page.</td></tr></tbody></table>
+<h3>Project content</h3>
+<p>The content displayed on the project page comes from <code>/src/content/projects</code>.</p>
+<p>Its writing style is similar to posts: one MDX file represents one project.</p>
+<h4>Project frontmatter</h4>
+<p>Example (<code>src/content/projects/Litos/index.mdx</code>):</p>
+<pre><code>---
+name: 'Litos'
+description: 'A Simple &amp; Modern Blog Theme for Astro.'
+githubUrl: 'https://github.com/Dnzzk2/Litos'
+website: 'https://litos.vercel.app/'
+type: 'image'
+icon: '../../../../public/projects/litos.png'
+imageClass: 'w-10 h-10'
+star: 32
+fork: 7
+---
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody><tr><td>name</td><td>Project name.</td></tr><tr><td>description</td><td>Short description shown with the project card.</td></tr><tr><td>githubUrl</td><td>GitHub repository URL of the project.</td></tr><tr><td>website</td><td>Project website or demo URL.</td></tr><tr><td>type</td><td>Display type for the project card. For now, <code>'image'</code> shows a thumbnail.</td></tr><tr><td>icon</td><td>Icon path for the project (supports paths under <code>public/</code>).</td></tr><tr><td>imageClass</td><td>Extra classes for sizing the image (e.g., Tailwind classes).</td></tr><tr><td>star</td><td>Stars count (optional).</td></tr><tr><td>fork</td><td>Forks count (optional).</td></tr></tbody></table>
+<h3>Tag Page Config</h3>
+<pre><code>export const TAGS_CONFIG: TagsConfig = {
+  title: 'Tags',
+  description: 'All tags of Posts',
+  introduce: 'All the tags for posts are here, you can click to filter them.',
+}
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Description</th></tr></thead><tbody><tr><td>title</td><td>Title displayed on browser tags and title displayed on the tag statistics page.</td></tr><tr><td>description</td><td>The metadata description in the <code>head</code> element of the tag statistics page.</td></tr><tr><td>introduce</td><td>The introduce below the title on the tag statistics page.</td></tr></tbody></table>]]></content>
+    <category term="Litos" />
+    <category term="Documentation" />
+  </entry>
+  <entry>
+    <title>Photos Page Config</title>
+    <link href="https://litos.vercel.app//posts/photos" rel="alternate" type="text/html"/>
+    <id>https://litos.vercel.app//posts/photos</id>
+    <updated>2025-08-10T00:00:00.000Z</updated>
+    <published>2025-08-10T00:00:00.000Z</published>
+    <author>
+      <name>Dnzzk2</name>
+    </author>
+    <summary type="text">Current implementation notes for the Photos page, including PHOTOS_CONFIG, PhotosList, and getPhotos().</summary>
+    <content type="html"><![CDATA[<img src="https://litos.vercel.app/_astro/cover.Do3E5r53_Z1UoMh2.webp" alt="Photos Page Config" style="width: 100%; height: auto; margin-bottom: 1em;" />
+<p>This document describes the current implementation of the Photos page.</p>
+<h2>Current file structure</h2>
+<ul>
+<li><code>src/pages/photos/index.astro</code>
+<ul>
+<li>Reads page text from <code>PHOTOS_CONFIG</code></li>
+<li>Reads timeline data from <code>PhotosList</code></li>
+</ul>
+</li>
+<li><code>src/config.ts</code>
+<ul>
+<li>Stores <code>PHOTOS_CONFIG</code></li>
+</ul>
+</li>
+<li><code>src/lib/photos.ts</code>
+<ul>
+<li>Stores <code>PhotosList</code></li>
+<li>Auto-imports photo files</li>
+<li>Converts one folder of images into <code>Photo[]</code> with <code>getPhotos()</code></li>
+</ul>
+</li>
+<li><code>src/types.ts</code>
+<ul>
+<li>Defines <code>PhotoData</code>, <code>Photo</code>, and <code>PolaroidVariant</code></li>
+</ul>
+</li>
+<li><code>src/components/photos/PolaroidCard.tsx</code>
+<ul>
+<li>Maps each <code>variant</code> to the actual card size</li>
+</ul>
+</li>
+</ul>
+<h2>Page text</h2>
+<p>The page title and intro text come from <code>src/config.ts</code>.</p>
+<pre><code>export const PHOTOS_CONFIG: PhotosConfig = {
+  title: 'Photos',
+  description: 'Here I will record some photos taken in daily life.',
+  introduce: 'Here I will record some photos taken in daily life.',
+}
+</code></pre>
+<p><code>src/pages/photos/index.astro</code> renders the page like this:</p>
+<pre><code>---
+import { PHOTOS_CONFIG } from '~/config'
+import { PhotosList } from '~/lib/photos'
+
+const { title, description, introduce } = PHOTOS_CONFIG
+---
+
+&lt;Layout {title} {description}&gt;
+  &lt;PageTitle {title} {introduce} /&gt;
+  &lt;PhotoTimeline photoData={PhotosList} /&gt;
+&lt;/Layout&gt;
+</code></pre>
+<h2>PhotosList</h2>
+<p><code>PhotosList</code> is defined in <code>src/lib/photos.ts</code>. Each item is one timeline entry.</p>
+<pre><code>export const PhotosList: PhotoData[] = [
+  {
+    title: 'Ningbo - Botanical Garden',
+    icon: { type: 'emoji', value: '🌼' },
+    description: 'It was early spring, so I went to see the cherry blossoms.',
+    date: '2026-03-07',
+    travel: '',
+    photos: getPhotos(
+      '2026-03-07-botanicalGarden',
+      'Early spring cherry blossoms at the botanical garden',
+      ['3x4', '3x4', '3x4', '3x4', '3x4', '3x4']
+    ),
+  },
+]
+</code></pre>
+<h3>PhotoData fields</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Field</th><th>Meaning</th></tr></thead><tbody><tr><td><code>title</code></td><td>Timeline title</td></tr><tr><td><code>icon</code></td><td>Left-side timeline icon</td></tr><tr><td><code>description</code></td><td>Optional timeline description</td></tr><tr><td><code>date</code></td><td>Timeline date</td></tr><tr><td><code>travel</code></td><td>Optional extra label</td></tr><tr><td><code>photos</code></td><td>Array of <code>Photo</code> objects</td></tr></tbody></table>
+<h2>How <code>getPhotos()</code> works</h2>
+<p>Current implementation:</p>
+<pre><code>function getPhotos(dir: string, alt: string, variants: PolaroidVariant[]): Photo[] {
+  return Object.entries(photoModules)
+    .filter(([path]) =&gt; path.includes(`/${dir}/`))
+    .sort(([a], [b]) =&gt; a.localeCompare(b))
+    .map(([, mod], index) =&gt; {
+      const img = mod.default
+      return {
+        src: img,
+        alt,
+        width: img.width,
+        height: img.height,
+        variant: variants[index] || '4x3',
+      }
+    })
+}
+</code></pre>
+<h3>Parameter meaning</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Parameter</th><th>Meaning</th></tr></thead><tbody><tr><td><code>dir</code></td><td>Folder name under <code>src/assets/photos</code></td></tr><tr><td><code>alt</code></td><td>Shared <code>alt</code> text for every image returned from that folder</td></tr><tr><td><code>variants</code></td><td>Ratio list matched to the sorted images by index</td></tr></tbody></table>
+<h3>Important behavior</h3>
+<ol>
+<li><code>getPhotos()</code> first filters all imported images by folder name.</li>
+<li>It then sorts the matched file paths with <code>localeCompare</code>.</li>
+<li>It creates the final <code>Photo[]</code> in that sorted order.</li>
+<li><code>variants[index]</code> is applied to the photo at the same index.</li>
+<li>If one index is missing in <code>variants</code>, that photo falls back to <code>'4x3'</code>.</li>
+</ol>
+<h3>How the third parameter is matched</h3>
+<p>The third parameter is not random metadata. It is position-based.</p>
+<p>For this code:</p>
+<pre><code>photos: getPhotos(
+  '2026-03-07-botanicalGarden',
+  'Early spring cherry blossoms at the botanical garden',
+  ['3x4', '3x4', '3x4', '3x4', '3x4', '3x4']
+)
+</code></pre>
+<p>Assume the folder <code>src/assets/photos/2026-03-07-botanicalGarden/</code> contains these files after sorting:</p>
+<pre><code>01.webp
+02.webp
+03.webp
+04.webp
+05.webp
+06.webp
+</code></pre>
+<p>Then the mapping is:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>File</th><th>Applied variant</th></tr></thead><tbody><tr><td><code>01.webp</code></td><td>first item in the array -&gt; <code>3x4</code></td></tr><tr><td><code>02.webp</code></td><td>second item in the array -&gt; <code>3x4</code></td></tr><tr><td><code>03.webp</code></td><td>third item in the array -&gt; <code>3x4</code></td></tr><tr><td><code>04.webp</code></td><td>fourth item in the array -&gt; <code>3x4</code></td></tr><tr><td><code>05.webp</code></td><td>fifth item in the array -&gt; <code>3x4</code></td></tr><tr><td><code>06.webp</code></td><td>sixth item in the array -&gt; <code>3x4</code></td></tr></tbody></table>
+<p>So if you want the first photo in the folder to use <code>3x4</code>, the first item in the third array must be <code>3x4</code>.</p>
+<p>If you want mixed ratios, write them in the same order as the sorted files:</p>
+<pre><code>photos: getPhotos('2025-03-01-dongqianhu', 'Ningbo - Dongqian Lake', ['4x5', '1x1', '4x3'])
+</code></pre>
+<p>That means:</p>
+<ul>
+<li>first sorted image -&gt; <code>4x5</code></li>
+<li>second sorted image -&gt; <code>1x1</code></li>
+<li>third sorted image -&gt; <code>4x3</code></li>
+</ul>
+<p>If the folder contains more photos than the array length:</p>
+<pre><code>photos: getPhotos('example-folder', 'Example alt', ['3x4', '4x5'])
+</code></pre>
+<p>Then:</p>
+<ul>
+<li>first sorted image -&gt; <code>3x4</code></li>
+<li>second sorted image -&gt; <code>4x5</code></li>
+<li>third sorted image and later -&gt; default <code>4x3</code></li>
+</ul>
+<h2>Supported variants</h2>
+<p><code>PolaroidVariant</code> is currently:</p>
+<pre><code>export type PolaroidVariant = '1x1' | '4x5' | '4x3' | '3x4' | '9x16'
+</code></pre>
+<p>Current size mapping in <code>src/components/photos/PolaroidCard.tsx</code>:</p>
+<pre><code>const polaroidVariants: Record&lt;PolaroidVariant, string&gt; = {
+  '1x1': 'w-20 h-20',
+  '4x5': 'w-20 h-24',
+  '4x3': 'w-20 h-16',
+  '3x4': 'w-[4.5rem] h-24',
+  '9x16': 'w-20 h-32',
+}
+</code></pre>
+<h2>How to add a new timeline entry</h2>
+<ol>
+<li>Create a folder under <code>src/assets/photos/</code>, for example <code>2026-04-01-spring-walk</code>.</li>
+<li>Put image files into that folder.</li>
+<li>Make sure the file names are in the order you want after sorting.</li>
+<li>Add one item to <code>PhotosList</code> in <code>src/lib/photos.ts</code>.</li>
+<li>Pass the third argument to <code>getPhotos()</code> in the same order as the sorted files.</li>
+</ol>
+<p>Example:</p>
+<pre><code>{
+  title: 'Spring Walk',
+  icon: { type: 'emoji', value: '🌿' },
+  description: 'A short walk with a camera.',
+  date: '2026-04-01',
+  travel: '',
+  photos: getPhotos(
+    '2026-04-01-spring-walk',
+    'Photos from a spring walk',
+    ['3x4', '4x3', '4x5', '4x3']
+  ),
+}
+</code></pre>
+<h2>Notes</h2>
+<ul>
+<li><code>alt</code> is applied to every photo returned from the same folder.</li>
+<li>The order is determined by sorted file path, not by import order in the editor.</li>
+<li>If you rename files, the sort order may change, and the <code>variants</code> array will then map to different photos.</li>
+</ul>]]></content>
+    <category term="Litos" />
+    <category term="Documentation" />
+  </entry>
+</feed>
